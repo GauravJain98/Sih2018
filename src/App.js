@@ -12,6 +12,9 @@ import { IndividualHome } from './Components/IndividualHome';
 import { StartupHome } from './Components/StartupHome';
 import { MentorHome } from './Components/MentorHome';
 import { IncubsHome } from './Components/IncubsHome';
+import { AboutMentor } from './Components/AboutMentor';
+import { StartupAbout } from './Components/StartupAbout';
+import { AboutStartup } from './Components/AboutStartup';
 class App extends Component {
   render() {
     let body = document.querySelector('body');
@@ -35,7 +38,8 @@ class App extends Component {
               <Route path='/startuphome' component={StartupHome} />
               <Route path='/mentorhome' component={MentorHome} />
               <Route path='/incubhome' component={IncubsHome} />
-
+              <Route path="/startupDetails/:id" component={AboutStartup} />
+              <Route path="/MentorAbout/:id" component={AboutMentor} />
             </Switch >
 
           </div>

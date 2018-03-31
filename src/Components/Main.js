@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 export class Main extends React.Component {
     render() {
         return (
@@ -49,32 +49,41 @@ export class Main extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-3 col-md-6 text-center">
-                                <div className="service-box mt-5 mx-auto">
-                                    <i className="fa fa-4x fa-user  text-primary mb-3 sr-icons"></i>
-                                    <h3 className="mb-3">Study Courses</h3>
-                                    <p className="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
-                                </div>
+                                <Link to="/indihome">
+                                    <div className="service-box mt-5 mx-auto">
+                                        <i className="fa fa-4x fa-user  text-primary mb-3 sr-icons"></i>
+                                        <h3 className="mb-3">Study Courses</h3>
+                                        <p className="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+                                    </div>
+                                </Link>
                             </div>
                             <div className="col-lg-3 col-md-6 text-center">
-                                <div className="service-box mt-5 mx-auto">
-                                    <i className="fa fa-4x fa-users text-primary mb-3 sr-icons"></i>
-                                    <h3 className="mb-3">Work on Your StartUp</h3>
-                                    <p className="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
-                                </div>
+                                <Link to="/startuphome">
+                                    <div className="service-box mt-5 mx-auto">
+                                        <i className="fa fa-4x fa-users text-primary mb-3 sr-icons"></i>
+                                        <h3 className="mb-3">Work on Your StartUp</h3>
+                                        <p className="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+                                    </div>
+                                </Link>
+
                             </div>
                             <div className="col-lg-3 col-md-6 text-center">
-                                <div className="service-box mt-5 mx-auto">
-                                    <i className="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-                                    <h3 className="mb-3">Find Mentors</h3>
-                                    <p className="text-muted mb-0">We update dependencies to keep things fresh.</p>
-                                </div>
+                                <Link to="/mentorhome">
+                                    <div className="service-box mt-5 mx-auto">
+                                        <i className="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
+                                        <h3 className="mb-3">Find Mentors</h3>
+                                        <p className="text-muted mb-0">We update dependencies to keep things fresh.</p>
+                                    </div>
+                                </Link>
                             </div>
                             <div className="col-lg-3 col-md-6 text-center">
-                                <div className="service-box mt-5 mx-auto">
-                                    <i className="fa fa-4x fa-building text-primary mb-3 sr-icons"></i>
-                                    <h3 className="mb-3">Find Incubation</h3>
-                                    <p className="text-muted mb-0">You have to make your websites with love these days!</p>
-                                </div>
+                                <Link to="/incubhome">
+                                    <div className="service-box mt-5 mx-auto">
+                                        <i className="fa fa-4x fa-building text-primary mb-3 sr-icons"></i>
+                                        <h3 className="mb-3">Find Incubation</h3>
+                                        <p className="text-muted mb-0">You have to make your websites with love these days!</p>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </div>

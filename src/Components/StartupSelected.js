@@ -9,7 +9,7 @@ export class StartupSelected extends React.Component {
                             {[1, 2, 3, 4, 1, 2, 3, 5].map(() => {
                                 return (
                                     <div className="card text-dark bg-light mb-4 m-4 text-lg-center" style={{ maxWidth: "18rem" }}>
-                                        <div className="card-header">(mentor name)</div>
+                                        <div className="card-header">Mr Aki</div>
                                         <div className="card-body">
                                             <h5 className="card-title">Course Name</h5>
                                             <img className="card-img-top" style={{ marginBottom: "2%" }} src="img/portfolio/thumbnails/1.jpg" alt="Cardimagecap" />
