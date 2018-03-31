@@ -99,7 +99,7 @@ export class IncubsForm extends React.Component {
                     </div>
 
                     <hr className="mb-4" />
-                    <Link to="/">
+                    <Link to="/incubhome">
                         <button className="btn btn-primary btn-lg btn-block" onClick={() => {
                             if (localStorage) {
                                 localStorage.user = 'inc';

@@ -114,7 +114,7 @@ export class MentorForm extends React.Component {
                         <label className="custom-control-label" htmlFor="TandC">Agree to <a href="/" target="_blank">terms and conditions</a></label>
                     </div>
                     <hr className="mb-4" />
-                    <Link to="/">
+                    <Link to="/mentorhome">
                         <button className="btn btn-primary btn-lg btn-block" onClick={() => {
                             if (localStorage) {
                                 localStorage.user = 'men';

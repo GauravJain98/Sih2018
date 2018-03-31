@@ -10,7 +10,7 @@ export class AboutStartup extends React.Component {
                                 <div className="col-md-3">
                                     <div className="card" style={{width: "18rem",border: "hidden"}}>
                                         <img className="card-img-top"
-                                            src="img/pict&#45;&#45;customer-female-ivr-people-vector-stencils-library.png"
+                                            src="/img/pict&#45;&#45;customer-female-ivr-people-vector-stencils-library.png"
                                             alt="Cage cp" />
                                         <div className="card-body">
                                             <a ><h5 className="card-title">website.com</h5></a>
@@ -23,8 +23,8 @@ export class AboutStartup extends React.Component {
                                             </span>
                                         </div>
                                         <ul className="list-group list-group-flush">
-                                            <li className="list-group-item"><a href="/chat.html" type="button" className="btn">Request a
-                                message</a></li>
+                                            <li className="list-group-item"><button href="/chat.html" type="button" className="btn">Request a
+                                message</button></li>
                                             <li className="list-group-item"><a    type="button" className="btn">
                                                 <span>
                                                     <i className="fa fa-heart-o"></i>
@@ -115,7 +115,7 @@ export class AboutStartup extends React.Component {
                                 </h2>
                                                 <div className="row">
                                                     <div className="col-2 m-2" style={{maxWidth: "12rem"}}>
-                                                        <img className="card-img-top" src="img/pict--customer-female-ivr-people-vector-stencils-library.png" alt="Caasimage cap" />
+                                                        <img className="card-img-top" src="/img/pict--customer-female-ivr-people-vector-stencils-library.png" alt="Caasimage cap" />
                                                         <div className="card-body">
                                                             <a><h5 className="card-title" style={{color:"#51d8af"}}>(Name of mentor)</h5></a>
                                                         </div>
@@ -142,9 +142,9 @@ export class AboutStartup extends React.Component {
                                     </a></span>
                             </div>
                         </div>
-                        <div className="row p-4">
+                        {/* <div className="row p-4">
                             <div className="col-2">
-                                <img src="img/pict--customer-female-ivr-people-vector-stencils-library.png" alt="asdasd"  style={{maxWidth: "30%"}} />
+                                <img src="/img/pict--customer-female-ivr-people-vector-stencils-library.png" alt="asdasd"  style={{maxWidth: "30%"}} />
                                 <small className="card-title text-success" style={{color: "#51d8af"}}>(poster)</small>
                             </div>
                             <div className="col-10 mb-2">
@@ -153,15 +153,11 @@ export class AboutStartup extends React.Component {
                                     ome quick example text to build on the card title
                                     ome quick example text to build on the card title
                                     ome quick example text to build on the card title
-                                    ome quick example text to build on the card title
-                                    ome quick example text to build on the card title
-                                    ome quick example text to build on the card title
-                                    ome quick example text to build on the card title
                     </p>
                             </div>
                             <hr />
 
-                        </div>
+                        </div> */}
 
                     </div>
 

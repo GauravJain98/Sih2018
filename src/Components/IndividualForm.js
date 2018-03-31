@@ -8,6 +8,7 @@ export class IndividualForm extends React.Component {
             email: '',
             password: '',
             address: '',
+            user: {}
         }
     }
     render() {

@@ -1,21 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 export class MentorHome extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            data: [{
+                name: 'Name1', id: 1, stars: 5
+            }],
+        }
+        fetch('https://localhost:5000/startup', { method: 'GET' }).then(res => res.json()).then((da) => { this.setState({ data: da }); console.log(this.state) }).catch(() => { console.log('Error') })
+
+    }
+    componentDidMount() {
+        console.log(this.state);
+    }
     render() {
         return (
             <div role="main" style={{ zIndex: "999" }}>
                 <div className="container-fluid mt-4" style={{ zIndex: "999", maxWidth: "80%" }} >
                     <div className="row row-offcanvas row-offcanvas-right">
 
-                        <div className="col-12 col-md-9">
-                            <p className="float-right d-md-none">
-                                <button type="button" className="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
-                            </p>
+                        <div className="col-12">
                             <div className="jumbotron">
-                                <h3>Our mentors know (almost) everything</h3>
+                                <h3>Find some Startup's</h3>
                                 <p>Weather it's growth, finances and skills development, we will find the right mentor for you</p>
                             </div>
-                            <div className="row">
+                            <div className="row classes">
                                 {
                                     [1, 2, 3, 4, 5].map((ele) => {
                                         return (

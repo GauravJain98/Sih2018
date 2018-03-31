@@ -5,33 +5,37 @@ export class AboutMentor extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            obj: {
-                "id": "1",
-                "name": "Mr.Akshat Gupta",
-                "occupation": "Teacher",
-                "Location": "Delhi",
-                "skills": [
-                    "web", "amdroid", "python", "ruby"
-                ],
-                "startups": [
-                    "skill India", "abc", "xyz"
-                ],
-                "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
-                "reviews": [{ "value": "good work" }, { "value": "Nice" }],
-                "education": [
-                    "Mtech", "Btech"
-                ]
-            },
+            obj: {},
             value: ''
         }
+        fetch('http://localhost:5000/mentor/1', { method: 'GET' }).then(res => res.json())
+        .then((da) => { this.setState({ obj: da }); 
+        console.log(this.state) }).catch(() => { console.log('Error') })
+
     }
-    // componentDidMount() {
-    //     console.log(this.props.params.id);
-    //     this.state.mentor.getMentor().filter((ele) => {
-    //         ele.name === this.props.params.id
-    //     })
-    //     console.log(this.state);
-    // }
+    showReview() {
+        if (this.state.obj.reviews !== null) {
+            return this.state.obj.reviews.map((ele, index) => {
+                return (
+                    <div className="row">
+                        <div className="col-2" key={'review' + index}>
+                            <img className="card-img-top"
+                                src="./img/pict&#45;&#45;customer-female-ivr-people-vector-stencils-library.png"
+                                alt="Card imp" style={{ maxWidth: "50%" }} />
+                            <small className="card-title text-success" style={{ color: "#51d8af" }} > (poster)</small>
+                        </div>
+                        <div className="col-10">
+                            <p className="card-text">{ele.review}
+                            </p>
+                        </div>
+                    </div>
+                )
+            })
+        } else {
+            return (<span></span >)
+        }
+
+    }
     render() {
         return (
             <div className="container-fluid mt-4" style={{ zIndex: '999', maxWidth: '80%' }}>
@@ -54,8 +58,8 @@ export class AboutMentor extends Component {
                                         </span>
                                     </div>
                                     <ul className="list-group list-group-flush">
-                                        <li className="list-group-item"><a className="btn" > Request a
-                      message</a></li>
+                                        <li className="list-group-item"><button className="btn btn-primary" > Request a
+                      message</button></li>
                                         <li className="list-group-item"><a className="btn" >
                                             <span>
                                                 <i className="fa fa-heart-o"></i>
@@ -144,19 +148,19 @@ export class AboutMentor extends Component {
                                         </p>
                                         <div className="row" style={{ maxWidth: "100%" }}>
                                             <div className="col-2 mb-1">
-                                                <a className="card-link">mentor 1</a>
+                                                <a className="card-link">startup 1</a>
                                             </div>
                                             <div className="col-2 mb-1">
-                                                <a className="card-link">mentor 1</a>
+                                                <a className="card-link">startup 2</a>
                                             </div>
                                             <div className="col-2 mb-1">
-                                                <a className="card-link">mentor 1</a>
+                                                <a className="card-link">startup 3</a>
                                             </div>
                                             <div className="col-2 mb-1">
-                                                <a className="card-link">mentor 1</a>
+                                                <a className="card-link">startup 4</a>
                                             </div>
                                             <div className="col-2 mb-1">
-                                                <a className="card-link">mentor 1</a>
+                                                <a className="card-link">startup 5</a>
                                             </div>
                                         </div>
                                     </div>
@@ -187,24 +191,7 @@ export class AboutMentor extends Component {
                         </div>
 
                         <div className="">
-                            {this.state.obj.reviews.map((ele, index) => {
-                                return (
-                                    <div className="row">
-                                        <div className="col-2" key={'review' + index}>
-                                            <img className="card-img-top"
-                                                src="./img/pict&#45;&#45;customer-female-ivr-people-vector-stencils-library.png"
-                                                alt="Card imp" style={{ maxWidth: "50%" }} />
-                                            <small className="card-title text-success" style={{ color: "#51d8af" }} > (poster)</small>
-                                        </div>
-                                        <div className="col-10">
-                                            <p className="card-text">{ele.review}
-                                            </p>
-                                        </div>
-                                    </div>
-
-
-                                )
-                            })}
+                            {this.showReview()}
 
                         </div>
 

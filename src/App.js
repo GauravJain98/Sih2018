@@ -8,7 +8,6 @@ import { IndividualForm } from './Components/IndividualForm';
 import { StartupForm } from './Components/StartupForm';
 import { MentorForm } from './Components/MentorForm';
 import { IncubsForm } from './Components/IncubsForm';
-import { IndividualHome } from './Components/IndividualHome';
 import { StartupHome } from './Components/StartupHome';
 import { MentorHome } from './Components/MentorHome';
 import { IncubsHome } from './Components/IncubsHome';
@@ -34,7 +33,7 @@ class App extends Component {
               <Route path='/signupstartup' component={StartupForm} />
               <Route path='/signupmentor' component={MentorForm} />
               <Route path='/signupincubs' component={IncubsForm} />
-              <Route path='/indihome' component={IndividualHome} />
+              <Route path='/indihome' component={StartupAbout} />
               <Route path='/startuphome' component={StartupHome} />
               <Route path='/mentorhome' component={MentorHome} />
               <Route path='/incubhome' component={IncubsHome} />

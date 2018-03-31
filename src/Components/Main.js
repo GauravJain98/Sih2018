@@ -9,11 +9,11 @@ export class Main extends React.Component {
                         <div className="row">
                             <div className="col-lg-10 mx-auto">
                                 <h1 className="text-uppercase">
-                                    <strong>We connect students and startups with mentors all over India.</strong>
+                                    <strong>We connect Startups with mentors all over India.</strong>
                                 </h1>
                                 <hr />
                             </div>
-                            <div style={{ textAlign: 'center', width: '100%' }}>
+                            <div style={{ textAlign: 'center', width: '100%', color: 'white', textShadow: '0px 0px 10px black' }}>
                                 <h5>
                                     We believe in the philosophy that everything begins with an idea.
                                 <br />
@@ -41,7 +41,7 @@ export class Main extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 text-center">
-                                <h2 className="section-heading">At Your Service</h2>
+                                <h2 className="section-heading" style={{ color: 'white' }}>At Your Service</h2>
                                 <hr className="my-4" />
                             </div>
                         </div>
@@ -51,18 +51,16 @@ export class Main extends React.Component {
                             <div className="col-lg-3 col-md-6 text-center">
                                 <Link to="/indihome">
                                     <div className="service-box mt-5 mx-auto">
-                                        <i className="fa fa-4x fa-user  text-primary mb-3 sr-icons"></i>
-                                        <h3 className="mb-3">Study Courses</h3>
-                                        <p className="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+                                        <i className="fa fa-4x fa-newspaper-o  text-primary mb-3 sr-icons"></i>
+                                        <h3 className="mb-3">Blogs</h3>
                                     </div>
                                 </Link>
                             </div>
                             <div className="col-lg-3 col-md-6 text-center">
                                 <Link to="/startuphome">
                                     <div className="service-box mt-5 mx-auto">
-                                        <i className="fa fa-4x fa-users text-primary mb-3 sr-icons"></i>
-                                        <h3 className="mb-3">Work on Your StartUp</h3>
-                                        <p className="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+                                        <i className="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
+                                        <h3 className="mb-3">Find Mentors</h3>
                                     </div>
                                 </Link>
 
@@ -70,9 +68,8 @@ export class Main extends React.Component {
                             <div className="col-lg-3 col-md-6 text-center">
                                 <Link to="/mentorhome">
                                     <div className="service-box mt-5 mx-auto">
-                                        <i className="fa fa-4x fa-graduation-cap text-primary mb-3 sr-icons"></i>
-                                        <h3 className="mb-3">Find Mentors</h3>
-                                        <p className="text-muted mb-0">We update dependencies to keep things fresh.</p>
+                                        <i className="fa fa-4x fa-users text-primary mb-3 sr-icons"></i>
+                                        <h3 className="mb-3">Work on Your StartUp</h3>
                                     </div>
                                 </Link>
                             </div>
@@ -81,14 +78,13 @@ export class Main extends React.Component {
                                     <div className="service-box mt-5 mx-auto">
                                         <i className="fa fa-4x fa-building text-primary mb-3 sr-icons"></i>
                                         <h3 className="mb-3">Find Incubation</h3>
-                                        <p className="text-muted mb-0">You have to make your websites with love these days!</p>
                                     </div>
                                 </Link>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section id="contact">
+                <section id="contact" style={{ color: 'white' }}>
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8 mx-auto text-center">
